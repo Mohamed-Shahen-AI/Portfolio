@@ -1,0 +1,120 @@
+Failed to fetch projects: Error: HTTP error! status: 401
+    fetchProjects Dashboard.tsx:91
+    Dashboard Dashboard.tsx:64
+    TN code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    T8 code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    T7 code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    T6 code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    T4 code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    S1 code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    SQ code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    SZ code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    SJ code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    SO code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    pC code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    SL code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    IO code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    scheduleRefresh code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:17
+    performReactRefresh @react-refresh:228
+    performReactRefresh @react-refresh:217
+    enqueueUpdate @react-refresh:608
+    setTimeout handler*debounce/< @react-refresh:598
+    validateRefreshBoundaryAndEnqueueUpdate @react-refresh:648
+    <anonymous> Dashboard.tsx:1148
+    accept client:34
+    fetchUpdate client:213
+    queueUpdate client:186
+    queueUpdate client:186
+    handleMessage client:930
+    handleMessage client:928
+    createHMRHandler client:490
+    dequeue client:516
+    enqueue client:504
+    enqueue client:498
+    createHMRHandler client:490
+    onMessage client:309
+    connect client:439
+code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:17:102314
+Failed to fetch projects: Error: HTTP error! status: 401
+    fetchProjects Dashboard.tsx:91
+    Dashboard Dashboard.tsx:64
+    TN code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    T8 code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    T7 code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    T6 code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    T4 code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    S1 code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    SQ code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    SZ code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    SJ code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    SO code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    pC code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    Sy code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    Sy code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    SE code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    m9 code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    handleDashboardAccess App.tsx:42
+    handleKeyDown App.tsx:27
+code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:17:102314
+[vite] hot updated: /src/app/components/Dashboard.tsx code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:90:31249
+[vite] hot updated: /src/styles/index.css code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:90:31249
+11:09:56 PM [vite] (client) hmr update /src/app/components/Dashboard.tsx, /src/styles/index.css code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:90:31294
+Checking authentication... code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:90:31294
+Session retrieved: false Has access token: false code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:90:31294
+No access token in session code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:90:31294
+Auth state changed: INITIAL_SESSION Session exists: false code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:90:31294
+No session or access token available code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:90:31294
+Failed to fetch projects: Error: HTTP error! status: 401
+    fetchProjects Dashboard.tsx:99
+    Dashboard Dashboard.tsx:64
+    TN code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    T8 code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    T7 code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    T6 code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    T4 code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    S1 code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    SQ code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    SZ code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    SJ code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    SO code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    pC code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    SL code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    IO code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:37
+    scheduleRefresh code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:17
+    performReactRefresh @react-refresh:228
+    performReactRefresh @react-refresh:217
+    enqueueUpdate @react-refresh:608
+    setTimeout handler*debounce/< @react-refresh:598
+    validateRefreshBoundaryAndEnqueueUpdate @react-refresh:648
+    <anonymous> Dashboard.tsx:1158
+    accept client:34
+    fetchUpdate client:213
+    queueUpdate client:186
+    queueUpdate client:186
+    handleMessage client:930
+    handleMessage client:928
+    createHMRHandler client:490
+    dequeue client:516
+    enqueue client:504
+    enqueue client:498
+    createHMRHandler client:490
+    onMessage client:309
+    connect client:439
+code_components_preview_iframe-4d2efcec2b596a6b.min.js.br:17:102314
+Uncaught (in promise) Error: XHR for "https://www.figma.com/api/web_logger/metrics/active_session" failed with status 0
+    E https://www.figma.com/webpack-artifacts/assets/8215-7a620d1cb1994792.min.js.br:1452
+    w https://www.figma.com/webpack-artifacts/assets/8215-7a620d1cb1994792.min.js.br:1452
+    p https://www.figma.com/webpack-artifacts/assets/8215-7a620d1cb1994792.min.js.br:1452
+    _ https://www.figma.com/webpack-artifacts/assets/8215-7a620d1cb1994792.min.js.br:1413
+    v https://www.figma.com/webpack-artifacts/assets/8215-7a620d1cb1994792.min.js.br:186
+    u https://www.figma.com/webpack-artifacts/assets/vendor-core-83c17265f2588e9e.min.js.br:54
+8215-7a620d1cb1994792.min.js.br:1452:9435
+Source map error: Error: NetworkError when attempting to fetch resource.
+Resource URL: https://www.figma.com/webpack-artifacts/assets/vendor-core-83c17265f2588e9e.min.js.br
+Source Map URL: https://admin.figma.com/admin/webpack-artifacts/ba2f05d473b3e71ee684d16479f36f94cbf782c7/vendor-core-83c17265f2588e9e.min.js.map
+Source map error: Error: NetworkError when attempting to fetch resource.
+Resource URL: https://www.figma.com/webpack-artifacts/assets/8215-7a620d1cb1994792.min.js.br
+Source Map URL: https://admin.figma.com/admin/webpack-artifacts/c2b479cb34e081913917742185638ffdc99e8ea0/8215-7a620d1cb1994792.min.js.map
+Source map error: Error: NetworkError when attempting to fetch resource.
+Resource URL: https://www.figma.com/webpack-artifacts/assets/code_components_preview_iframe-4d2efcec2b596a6b.min.js.br
+Source Map URL: https://admin.figma.com/admin/webpack-artifacts/a47c83d4899a7595eecd6fb29865037c2eecfcf6/code_components_preview_iframe-4d2efcec2b596a6b.min.js.map
