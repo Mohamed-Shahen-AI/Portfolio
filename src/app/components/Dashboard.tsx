@@ -250,14 +250,14 @@ export function Dashboard({ onClose }: DashboardProps) {
       console.log('Using user token:', currentToken.substring(0, 30) + '...');
       console.log('Using anon key for auth:', publicAnonKey.substring(0, 30) + '...');
 
-      const response = await fetch(url, {
-        method: editingProject ? 'PUT' : 'POST',
+      const response = await fetch(`https://api.example.com/projects`, {
+        method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${publicAnonKey}`, // Use anon key for Supabase Edge Functions
-          'X-User-Token': currentToken, // Pass user token in custom header
+          'Authorization': `Bearer ${userToken}`
+          // Removed line for X-User-Token
         },
-        body: JSON.stringify(projectData),
+        body: JSON.stringify(projectData)
       });
 
       const data = await response.json();
