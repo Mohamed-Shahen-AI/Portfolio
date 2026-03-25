@@ -1,14 +1,16 @@
 import { motion } from 'motion/react';
-import { MapPin, Phone, Mail, Linkedin, ArrowRight, Calendar, Github } from 'lucide-react';
+import { useState } from 'react';
+import { MapPin, Phone, Mail, Linkedin, ArrowRight, Calendar, Github, X } from 'lucide-react';
 import { Button } from './ui/button';
-import profilePhoto from 'figma:asset/9fe7a28b88c92371b8946691d4fcc9b3a04c3469.png';
+import profilePhoto from 'figma:asset/7fc38f9fcda856c88a478fcf12cca01fd21c6642.png';
 
 interface HeroSectionProps {
   onNavigate: (section: string) => void;
-  onDashboardClick: () => void;
 }
 
-export function HeroSection({ onNavigate, onDashboardClick }: HeroSectionProps) {
+export function HeroSection({ onNavigate }: HeroSectionProps) {
+  const [photoOpen, setPhotoOpen] = useState(false);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-background to-chart-2/10">
       {/* Animated background nodes */}
@@ -47,7 +49,7 @@ export function HeroSection({ onNavigate, onDashboardClick }: HeroSectionProps) 
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            onClick={onDashboardClick}
+            onClick={() => setPhotoOpen(true)}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -87,6 +89,40 @@ export function HeroSection({ onNavigate, onDashboardClick }: HeroSectionProps) 
               />
             </div>
           </motion.div>
+
+          {/* Photo Lightbox */}
+          {photoOpen && (
+            <motion.div
+              className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm cursor-pointer"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setPhotoOpen(false)}
+            >
+              <motion.div
+                className="relative"
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+                onClick={(e) => e.stopPropagation()}
+              >
+                <div className="rounded-2xl overflow-hidden border-2 border-chart-1/50 shadow-2xl shadow-chart-1/20">
+                  <img
+                    src={profilePhoto}
+                    alt="Muhammad Shaheen"
+                    className="w-72 h-72 sm:w-96 sm:h-96 object-cover"
+                  />
+                </div>
+                <button
+                  onClick={() => setPhotoOpen(false)}
+                  className="absolute -top-3 -right-3 bg-card border border-border rounded-full p-1.5 text-muted-foreground hover:text-foreground transition-colors shadow-lg"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+                <p className="text-center text-white/70 text-sm mt-3">Muhammad Shaheen</p>
+              </motion.div>
+            </motion.div>
+          )}
 
           {/* Title */}
           <motion.h1

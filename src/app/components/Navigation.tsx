@@ -1,14 +1,13 @@
 import { motion } from 'motion/react';
 import { useState, useEffect } from 'react';
 import { Home, User, Briefcase, GraduationCap, Wrench, Mail } from 'lucide-react';
-import profilePhoto from 'figma:asset/9fe7a28b88c92371b8946691d4fcc9b3a04c3469.png';
+import profilePhoto from 'figma:asset/7fc38f9fcda856c88a478fcf12cca01fd21c6642.png';
 
 interface NavigationProps {
   onNavigate: (section: string) => void;
-  onDashboardClick: () => void;
 }
 
-export function Navigation({ onNavigate, onDashboardClick }: NavigationProps) {
+export function Navigation({ onNavigate }: NavigationProps) {
   const [activeSection, setActiveSection] = useState('home');
   const [isVisible, setIsVisible] = useState(false);
 
@@ -57,7 +56,7 @@ export function Navigation({ onNavigate, onDashboardClick }: NavigationProps) {
         <div className="flex items-center justify-between h-16">
           <motion.div
             className="flex items-center gap-3 cursor-pointer"
-            onClick={onDashboardClick}
+            onClick={() => onNavigate('home')}
             whileHover={{ scale: 1.05 }}
           >
             <img 

@@ -37,10 +37,7 @@ export function AboutSection() {
             className="bg-card rounded-2xl p-8 md:p-12 shadow-lg border border-border mb-12"
           >
             <p className="text-lg leading-relaxed">
-              Results-driven AI Engineer at Tanta University (BS in Computer/Software Eng, exp. Jun 2027). 
-              Master of n8n workflows, LLM integrations (OpenAI/Gemini), and RAG systems for business automation. 
-              Proficient in Python (FastAPI), JS Code Nodes, Docker, and Linux – crafting scalable solutions that 
-              reduce ops by 60%+. Passionate about startup efficiency via prompt engineering and API orchestration.
+              Results-driven AI Automation Engineer and n8n Specialist with extensive experience in architecting complex, production-ready workflows. Expert in integrating Large Language Models (LLMs) and building RAG systems to automate business processes. Proficient in Python, JavaScript, and API Security (OAuth2/JWT) to develop scalable, self-healing AI-driven solutions. Experienced in CRM integration and optimization to streamline customer relationship management and drive business growth.
             </p>
           </motion.div>
 

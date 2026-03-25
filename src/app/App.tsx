@@ -5,73 +5,12 @@ import { WorkSection } from './components/WorkSection';
 import { EducationSection } from './components/EducationSection';
 import { SkillsSection } from './components/SkillsSection';
 import { ContactSection } from './components/ContactSection';
-import { Dashboard } from './components/Dashboard';
-import { Login } from './components/Login';
 import { ThemeToggle } from './components/ThemeToggle';
 import { Toaster } from 'sonner';
-import { useState, useEffect } from 'react';
-import { supabase } from './lib/supabase';
 
+// Portfolio app - no backend dependencies
 function App() {
-  const [showDashboard, setShowDashboard] = useState(false);
-  const [showLogin, setShowLogin] = useState(false);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-
-  useEffect(() => {
-    checkAuth();
-    
-    // Listen for auth state changes
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
-      console.log('App.tsx - Auth state changed:', _event, 'Has session:', !!session);
-      setIsAuthenticated(!!session);
-    });
-    
-    return () => {
-      subscription.unsubscribe();
-    };
-  }, []);
-
-  const checkAuth = async () => {
-    const { data: { session } } = await supabase.auth.getSession();
-    setIsAuthenticated(!!session);
-  };
-
-  const handleDashboardAccess = () => {
-    console.log('Dashboard access requested. Authenticated:', isAuthenticated);
-    if (isAuthenticated) {
-      console.log('Opening dashboard...');
-      setShowDashboard(true);
-    } else {
-      console.log('Not authenticated, showing login...');
-      setShowLogin(true);
-    }
-  };
-
-  const handleLoginSuccess = async () => {
-    console.log('Login successful! Updating auth state...');
-    
-    // Wait a moment for Supabase to update the session
-    await new Promise(resolve => setTimeout(resolve, 500));
-    
-    // Force session check
-    const { data: { session } } = await supabase.auth.getSession();
-    console.log('Session after login:', !!session, 'Has token:', !!session?.access_token);
-    
-    setIsAuthenticated(!!session);
-    setShowLogin(false);
-    setShowDashboard(true);
-  };
-
-  const handleCloseDashboard = () => {
-    setShowDashboard(false);
-  };
-
   const scrollToSection = (sectionId: string) => {
-    if (sectionId === 'dashboard') {
-      handleDashboardAccess();
-      return;
-    }
-    
     const element = document.getElementById(sectionId === 'home' ? 'hero' : sectionId);
     if (element) {
       const offset = 80;
@@ -86,11 +25,11 @@ function App() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <ThemeToggle />
-      <Navigation onNavigate={scrollToSection} onDashboardClick={handleDashboardAccess} />
+      <Navigation onNavigate={scrollToSection} />
       
       <main>
         <div id="hero">
-          <HeroSection onNavigate={scrollToSection} onDashboardClick={handleDashboardAccess} />
+          <HeroSection onNavigate={scrollToSection} />
         </div>
         <AboutSection />
         <WorkSection />
@@ -110,9 +49,6 @@ function App() {
         </div>
       </footer>
 
-      {showLogin && <Login onSuccess={handleLoginSuccess} onClose={() => setShowLogin(false)} />}
-      {showDashboard && <Dashboard onClose={handleCloseDashboard} />}
-      
       <Toaster />
     </div>
   );
