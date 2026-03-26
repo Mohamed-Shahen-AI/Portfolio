@@ -255,7 +255,7 @@ Best regards,
               <span>mohamed.shahen.ai@gmail.com</span>
             </motion.a>
             <motion.a
-              href="https://linkedin.com/in/mohamed-shahen-301059314/"
+              href="https://www.linkedin.com/in/muhammad-shaheen-ai/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-3 py-2 rounded-lg bg-secondary hover:bg-accent transition-colors whitespace-nowrap"

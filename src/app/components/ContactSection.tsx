@@ -13,14 +13,30 @@ export function ContactSection() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  try {
+    await emailjs.send(
+      'YOUR_SERVICE_ID',
+      'YOUR_TEMPLATE_ID',
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+      },
+      'YOUR_PUBLIC_KEY'
+    );
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
       setFormData({ name: '', email: '', message: '' });
     }, 3000);
-  };
+  } catch (error) {
+    console.error('Failed to send email:', error);
+    // optionally show an error state
+  }
+};
 
   return (
     <section id="contact" className="min-h-screen py-20 bg-background" ref={ref}>
@@ -192,7 +208,7 @@ export function ContactSection() {
             className="mt-8 flex justify-center gap-6"
           >
             <motion.a
-              href="https://www.linkedin.com/in/mohamed-shahen-301059314/"
+              href="https://www.linkedin.com/in/muhammad-shaheen-ai/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-4 bg-card rounded-xl border border-border shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
